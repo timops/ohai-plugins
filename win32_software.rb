@@ -8,7 +8,7 @@ apps = WMI::Win32_Product.find(:all)
 
 apps.each do |app|
   installed_software[app.packagename] = Mash.new
-  %w(name version vendor packagenameckagename installdate).each do |attrib|
-    installed_software[app.packagenameename][attrib] = app.send(attrib)
+  %w(name version vendor packagename installdate).each do |attrib|
+    installed_software[app.packagename][attrib] = app.send(attrib)
   end
 end
